@@ -1,0 +1,27 @@
+.hothon{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.orts1{
+    height: 1000px;
+    width: 500px;
+    background-color: blue;
+}
+.dawhar10{
+    height: 10%;
+    width: 100%;
+    background-color: rebeccapurple ;
+}
+.orts2{
+    height: 1000px;
+    width: 500px;
+    background-color: blue;
+}
+.orts3{
+    height: 1000px;
+    width: 500px;
+    background-color: blue;
+}
