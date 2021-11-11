@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+.bair{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #023e8a 0%, #00b4d8 100%);
+
+}
+.orts{
+    border: 1px solid black;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.davhar{
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.tsonh{
+    border: 1px solid black;
+    height: 40px;
+    width: 32px;
+    background: #ffd7ba;
+}
