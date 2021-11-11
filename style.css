@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+input {
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 30px;
+}
+button {
+  height: 30px;
+  width: 50px;
+}
+.bair {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+  border: 1px solid black;
+}
+.orts {
+  flex: 1;
+  border: 1px solid black;
+}
+.haalga {
+  border: 1px solid black;
+  height: 100px;
+  width: 50px;
+  margin: 0 auto;
+}
+.davhar {
+  display: flex;
+  border: 1px solid black;
+}
+.tsonh {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+}
