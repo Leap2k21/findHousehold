@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+}
+.bair{
+    display: flex;
+    border: 1px solid black;
+
+}
+.orts{
+    border: 1px solid rgb(24, 23, 23);
+    flex: 1;
+}
+.davhar{
+    display: flex;
+    justify-content: space-around;
+}
+.tsonh{
+    border: 1px solid black;
+    height: 50px;
+    width: 40px;
+    background: #F1F8F7;
+    margin: 10px 0;
+}
+.haalga {
+    border: 1px solid black;
+    height: 100px;
+    width: 50px;
+    margin: 10px auto 0;
+    background: #E9C69E;
+  }
