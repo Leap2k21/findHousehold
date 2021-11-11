@@ -1,0 +1,11 @@
+#residence {
+    /* height: 100vh;
+    width: 100%; */
+    display: flex;
+    
+}
+.entrance {
+    border: 2px solid black;
+    height: 100vh;
+    width: 100%;
+}
