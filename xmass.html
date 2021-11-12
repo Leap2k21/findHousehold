@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-family: 'Berkshire Swash', cursive;
+            color: red;
+            text-shadow: 0 0.05em 0.1em #0005;
+            margin-bottom: 50px;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 200%;
+            background-image: linear-gradient(to bottom, #93f4f1, #82e5f1, #77d6ef, #73c6eb, #76b6e3, #7badda, #7fa5d1, #829dc7, #859bbe, #879ab5, #8a98ac, #8d96a3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial;
+            text-shadow: 0 0 1px #000;
+        }
+
+    @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+        .demo {
+            font-family: 'Raleway', sans-serif;
+	        color:#fff;
+            display: block;
+            margin: 0 auto;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .demo a{
+            font-family: 'Raleway', sans-serif;
+            color: #000;		
+        }
+        .building{
+            width: 1500px;
+            height: 750px;
+            border: #000 solid 1px;
+            background-color: rgb(196, 72, 72);
+            display: flex;
+            flex-direction: row;
+        }
+        .orts{
+            flex-grow: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .davhar{
+            width: 100%;
+            height: 9.09%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            border: #000 solid 1px;
+        }
+        .haalga{
+            width: 100%;
+            height: 18.18%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: #000 solid 1px;
+        }
+        .toot{
+            width: 30px;
+            height: 30px;
+            border: #000 solid 1px;
+            background-color: yellow;
+        }
+
+        .haalgashuu{
+            height: 100%;
+            width: 80px;
+            border: #000 solid 1px;
+            background-color: gray;
+            box-sizing: border-box;
+        }
+        .building {
+            box-shadow: 0px 0px 7px 10px #52fefe;
+        }
+        .haalgashuu {
+
+             box-shadow: 0px 0px 7px 5px #bbbe85 inset;
+        }
+        .oruulga{
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Marry Christmas</h1>
+   
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+      </div>
+    <div class="building">
+        <div class="orts" id="orts1">
+            <div class="davhar" id="q9">
+                <div class="toot" id="41"></div>
+                <div class="toot" id="42"></div>
+                <div class="toot" id="43"></div>
+                <div class="toot" id="44"></div>
+                <div class="toot" id="45"></div>
+            </div>
+            <div class="davhar" id="q8">
+                <div class="toot" id="36"></div>
+                <div class="toot" id="37"></div>
+                <div class="toot" id="38"></div>
+                <div class="toot" id="39"></div>
+                <div class="toot" id="40"></div>
+            </div>
+            <div class="davhar" id="q7">
+                <div class="toot" id="31"></div>
+                <div class="toot" id="32"></div>
+                <div class="toot" id="33"></div>
+                <div class="toot" id="34"></div>
+                <div class="toot" id="35"></div>
+            </div>
+            <div class="davhar" id="q6">
+                <div class="toot" id="26"></div>
+                <div class="toot" id="27"></div>
+                <div class="toot" id="28"></div>
+                <div class="toot" id="29"></div>
+                <div class="toot" id="30"></div>
+            </div>
+            <div class="davhar" id="q5">
+                <div class="toot" id="21"></div>
+                <div class="toot" id="22"></div>
+                <div class="toot" id="23"></div>
+                <div class="toot" id="24"></div>
+                <div class="toot" id="25"></div>
+            </div>
+            <div class="davhar" id="q4">
+                <div class="toot" id="16"></div>
+                <div class="toot" id="17"></div>
+                <div class="toot" id="18"></div>
+                <div class="toot" id="19"></div>
+                <div class="toot" id="20"></div>
+            </div>
+            <div class="davhar" id="q3">
+                <div class="toot" id="11"></div>
+                <div class="toot" id="12"></div>
+                <div class="toot" id="13"></div>
+                <div class="toot" id="14"></div>
+                <div class="toot" id="15"></div>
+            </div>
+            <div class="davhar" id="q2">
+                <div class="toot" id="6"></div>
+                <div class="toot" id="7"></div>
+                <div class="toot" id="8"></div>
+                <div class="toot" id="9"></div>
+                <div class="toot" id="10"></div>
+            </div>
+            <div class="davhar" id="q1">
+                <div class="toot" id="1"></div>
+                <div class="toot" id="2"></div>
+                <div class="toot" id="3"></div>
+                <div class="toot" id="4"></div>
+                <div class="toot" id="5"></div>
+            </div>
+            <div class="haalga" id="">
+                <div class="haalgashuu" id="h1">
+                  
+                        I-r orts
+                 
+                </div>
+            </div>
+
+        </div>
+        <div class="orts" id="orts2">
+            <div class="davhar" id="w9">
+                <div class="toot" id="86"></div>
+                <div class="toot" id="87"></div>
+                <div class="toot" id="88"></div>
+                <div class="toot" id="89"></div>
+                <div class="toot" id="90"></div>
+            </div>
+            <div class="davhar" id="w8">
+                <div class="toot" id="81"></div>
+                <div class="toot" id="82"></div>
+                <div class="toot" id="83"></div>
+                <div class="toot" id="84"></div>
+                <div class="toot" id="85"></div>
+            </div>
+            <div class="davhar" id="w7">
+                <div class="toot" id="76"></div>
+                <div class="toot" id="77"></div>
+                <div class="toot" id="78"></div>
+                <div class="toot" id="79"></div>
+                <div class="toot" id="80"></div>
+            </div>
+            <div class="davhar" id="w6">
+                <div class="toot" id="71"></div>
+                <div class="toot" id="72"></div>
+                <div class="toot" id="73"></div>
+                <div class="toot" id="74"></div>
+                <div class="toot" id="75"></div>
+            </div>
+            <div class="davhar" id="w5">
+                <div class="toot" id="66"></div>
+                <div class="toot" id="67"></div>
+                <div class="toot" id="68"></div>
+                <div class="toot" id="69"></div>
+                <div class="toot" id="70"></div>
+            </div>
+            <div class="davhar" id="w4">
+                <div class="toot" id="61"></div>
+                <div class="toot" id="62"></div>
+                <div class="toot" id="63"></div>
+                <div class="toot" id="64"></div>
+                <div class="toot" id="65"></div>
+            </div>
+            <div class="davhar" id="w3">
+                <div class="toot" id="56"></div>
+                <div class="toot" id="57"></div>
+                <div class="toot" id="58"></div>
+                <div class="toot" id="59"></div>
+                <div class="toot" id="60"></div>
+            </div>
+            <div class="davhar" id="w2">
+                <div class="toot" id="51"></div>
+                <div class="toot" id="52"></div>
+                <div class="toot" id="53"></div>
+                <div class="toot" id="54"></div>
+                <div class="toot" id="55"></div>
+            </div>
+            <div class="davhar" id="w1">
+                <div class="toot" id="46"></div>
+                <div class="toot" id="47"></div>
+                <div class="toot" id="48"></div>
+                <div class="toot" id="49"></div>
+                <div class="toot" id="50"></div>
+            </div>
+            <div class="haalga" id="">
+                <div class="haalgashuu" id="h2">
+                  
+                    II-r orts
+             
+            </div>
+            </div>
+        </div>
+        <div class="orts" id="orts3">
+            <div class="davhar" id="e9">
+                <div class="toot" id="131"></div>
+                <div class="toot" id="132"></div>
+                <div class="toot" id="133"></div>
+                <div class="toot" id="134"></div>
+                <div class="toot" id="135"></div>
+            </div>
+            <div class="davhar" id="e8">
+                <div class="toot" id="126"></div>
+                <div class="toot" id="127"></div>
+                <div class="toot" id="128"></div>
+                <div class="toot" id="129"></div>
+                <div class="toot" id="130"></div>
+            </div>
+            <div class="davhar" id="e7">
+                <div class="toot" id="121"></div>
+                <div class="toot" id="122"></div>
+                <div class="toot" id="123"></div>
+                <div class="toot" id="124"></div>
+                <div class="toot" id="125"></div>
+            </div>
+            <div class="davhar" id="e6">
+                <div class="toot" id="116"></div>
+                <div class="toot" id="117"></div>
+                <div class="toot" id="118"></div>
+                <div class="toot" id="119"></div>
+                <div class="toot" id="120"></div>
+            </div>
+            <div class="davhar" id="e5">
+                <div class="toot" id="111"></div>
+                <div class="toot" id="112"></div>
+                <div class="toot" id="113"></div>
+                <div class="toot" id="114"></div>
+                <div class="toot" id="115"></div>
+            </div>
+            <div class="davhar" id="e4">
+                <div class="toot" id="106"></div>
+                <div class="toot" id="107"></div>
+                <div class="toot" id="108"></div>
+                <div class="toot" id="109"></div>
+                <div class="toot" id="110"></div>
+            </div>
+            <div class="davhar" id="e3">
+                <div class="toot" id="101"></div>
+                <div class="toot" id="102"></div>
+                <div class="toot" id="103"></div>
+                <div class="toot" id="104"></div>
+                <div class="toot" id="105"></div>
+            </div>
+            <div class="davhar" id="e2">
+                <div class="toot" id="96"></div>
+                <div class="toot" id="97"></div>
+                <div class="toot" id="98"></div>
+                <div class="toot" id="99"></div>
+                <div class="toot" id="100"></div>
+            </div>
+            <div class="davhar" id="e1">
+                <div class="toot" id="91"></div>
+                <div class="toot" id="92"></div>
+                <div class="toot" id="93"></div>
+                <div class="toot" id="94"></div>
+                <div class="toot" id="95"></div>
+            </div>
+            <div class="haalga" id="">
+                <div class="haalgashuu" id="h3">
+                  
+                    III-r orts
+             
+            </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="oruulga">
+       <input type="number" id="haih">
+       <button onclick="haih()">haih</button>
+   </div>
+    
+
+   <script>
+       function haih() {
+        let hariu = Number(document.getElementById("haih").value); 
+        console.log(hariu);
+        if(hariu === 1){
+            document.getElementById('1').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q1').style.backgroundColor = 'pink';
+
+
+        }else if(hariu === 2){
+            document.getElementById('2').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q1').style.backgroundColor = 'pink';
+
+        }else if(hariu === 3){
+            document.getElementById('3').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q1').style.backgroundColor = 'pink';
+
+        }else if(hariu === 4){
+            document.getElementById('4').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q1').style.backgroundColor = 'pink';
+        }else if(hariu === 5){
+            document.getElementById('5').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q1').style.backgroundColor = 'pink';
+        }else if(hariu === 6){
+            document.getElementById('6').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q2').style.backgroundColor = 'pink';
+
+        }else if(hariu === 7){
+            document.getElementById('7').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q2').style.backgroundColor = 'pink';
+
+        }else if(hariu === 8){
+            document.getElementById('8').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q2').style.backgroundColor = 'pink';
+        }else if(hariu === 9){
+            document.getElementById('9').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q2').style.backgroundColor = 'pink';
+        }else if(hariu === 10){
+            document.getElementById('10').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q2').style.backgroundColor = 'pink';
+        }else if(hariu === 11){
+            document.getElementById('11').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q3').style.backgroundColor = 'pink';
+        }else if(hariu === 12){
+            document.getElementById('12').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q3').style.backgroundColor = 'pink';
+        }else if(hariu === 13){
+            document.getElementById('13').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q3').style.backgroundColor = 'pink';
+        }else if(hariu === 14){
+            document.getElementById('14').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q3').style.backgroundColor = 'pink';
+        }else if(hariu === 15){
+            document.getElementById('15').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q3').style.backgroundColor = 'pink';
+        }else if(hariu === 16){
+            document.getElementById('16').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q4').style.backgroundColor = 'pink';
+        }else if(hariu === 17){
+            document.getElementById('17').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q4').style.backgroundColor = 'pink';
+        }else if(hariu === 18){
+            document.getElementById('18').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q4').style.backgroundColor = 'pink';
+        }else if(hariu === 19){
+            document.getElementById('19').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q4').style.backgroundColor = 'pink';
+        }else if(hariu === 20){
+            document.getElementById('20').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q4').style.backgroundColor = 'pink';
+        }else if(hariu === 21){
+            document.getElementById('21').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q5').style.backgroundColor = 'pink';
+        }else if(hariu === 22){
+            document.getElementById('22').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q5').style.backgroundColor = 'pink';
+        }else if(hariu === 23){
+            document.getElementById('23').style.backgroundColor = 'red';
+            document.getElementById('25').style.backgroundColor = 'red';
+            document.getElementById('27').style.backgroundColor = 'red';
+            document.getElementById('29').style.backgroundColor = 'red';
+            document.getElementById('20').style.backgroundColor = 'red';
+            document.getElementById('14').style.backgroundColor = 'red';
+            document.getElementById('8').style.backgroundColor = 'red';
+            document.getElementById('12').style.backgroundColor = 'red';
+            document.getElementById('16').style.backgroundColor = 'red';
+            document.getElementById('21').style.backgroundColor = 'red';
+            document.getElementById('22').style.backgroundColor = 'red';
+            document.getElementById('24').style.backgroundColor = 'red';
+            document.getElementById('17').style.backgroundColor = 'red';
+            document.getElementById('18').style.backgroundColor = 'red';
+            document.getElementById('19').style.backgroundColor = 'red';
+            document.getElementById('13').style.backgroundColor = 'red';
+        }else if(hariu === 24){
+            document.getElementById('24').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q5').style.backgroundColor = 'pink';
+        }else if(hariu === 25){
+            document.getElementById('25').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q5').style.backgroundColor = 'pink';
+        }else if(hariu === 26){
+            document.getElementById('26').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q6').style.backgroundColor = 'pink';
+        }else if(hariu === 27){
+            document.getElementById('27').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q6').style.backgroundColor = 'pink';
+        }else if(hariu === 28){
+            document.getElementById('28').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q6').style.backgroundColor = 'pink';
+        }else if(hariu === 29){
+            document.getElementById('29').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q6').style.backgroundColor = 'pink';
+        }else if(hariu === 30){
+            document.getElementById('30').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q6').style.backgroundColor = 'pink';
+        }else if(hariu === 31){
+            document.getElementById('31').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q7').style.backgroundColor = 'pink';
+        }else if(hariu === 32){
+            document.getElementById('32').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q7').style.backgroundColor = 'pink';
+        }else if(hariu === 33){
+            document.getElementById('33').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q7').style.backgroundColor = 'pink';
+        }else if(hariu === 34){
+            document.getElementById('34').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q7').style.backgroundColor = 'pink';
+        }else if(hariu === 35){
+            document.getElementById('35').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q7').style.backgroundColor = 'pink';
+        }else if(hariu === 36){
+            document.getElementById('36').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q8').style.backgroundColor = 'pink';
+        }else if(hariu === 37){
+            document.getElementById('37').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q8').style.backgroundColor = 'pink';
+        }else if(hariu === 38){
+            document.getElementById('38').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q8').style.backgroundColor = 'pink';
+        }else if(hariu === 39){
+            document.getElementById('39').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q8').style.backgroundColor = 'pink';
+        }else if(hariu === 40){
+            document.getElementById('40').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q8').style.backgroundColor = 'pink';
+        }else if(hariu === 41){
+            document.getElementById('41').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q9').style.backgroundColor = 'pink';
+        }else if(hariu === 42){
+            document.getElementById('42').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q9').style.backgroundColor = 'pink';
+        }else if(hariu === 43){
+            document.getElementById('43').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q9').style.backgroundColor = 'pink';
+        }else if(hariu === 44){
+            document.getElementById('44').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q9').style.backgroundColor = 'pink';
+        }else if(hariu === 45){
+            document.getElementById('45').style.backgroundColor = 'green';
+            document.getElementById('h1').style.backgroundColor = 'black';
+            document.getElementById('q9').style.backgroundColor = 'pink';
+
+
+
+
+        }else if(hariu === 46){
+            document.getElementById('46').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w1').style.backgroundColor = 'pink';
+        }else if(hariu === 47){
+            document.getElementById('47').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w1').style.backgroundColor = 'pink';
+        }else if(hariu === 48){
+            document.getElementById('48').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w1').style.backgroundColor = 'pink';
+        }else if(hariu === 49){
+            document.getElementById('49').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w1').style.backgroundColor = 'pink';
+        }else if(hariu === 50){
+            document.getElementById('50').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w1').style.backgroundColor = 'pink';
+        }else if(hariu === 51){
+            document.getElementById('51').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w2').style.backgroundColor = 'pink';
+        }else if(hariu === 52){
+            document.getElementById('52').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w2').style.backgroundColor = 'pink';
+        }else if(hariu === 53){
+            document.getElementById('53').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w2').style.backgroundColor = 'pink';
+        }else if(hariu === 54){
+            document.getElementById('54').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w2').style.backgroundColor = 'pink';
+        }else if(hariu === 55){
+            document.getElementById('55').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w2').style.backgroundColor = 'pink';
+        }else if(hariu === 56){
+            document.getElementById('56').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w3').style.backgroundColor = 'pink';
+        }else if(hariu === 57){
+            document.getElementById('57').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w3').style.backgroundColor = 'pink';
+        }else if(hariu === 58){
+            document.getElementById('58').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w3').style.backgroundColor = 'pink';
+        }else if(hariu === 59){
+            document.getElementById('59').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w3').style.backgroundColor = 'pink';
+        }else if(hariu === 60){
+            document.getElementById('60').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w3').style.backgroundColor = 'pink';
+        }else if(hariu === 61){
+            document.getElementById('61').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w4').style.backgroundColor = 'pink';
+        }else if(hariu === 62){
+            document.getElementById('62').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w4').style.backgroundColor = 'pink';
+        }else if(hariu === 63){
+            document.getElementById('63').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w4').style.backgroundColor = 'pink';
+        }else if(hariu === 64){
+            document.getElementById('64').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w4').style.backgroundColor = 'pink';
+        }else if(hariu === 65){
+            document.getElementById('65').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w4').style.backgroundColor = 'pink';
+        }else if(hariu === 66){
+            document.getElementById('66').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w5').style.backgroundColor = 'pink';
+        }else if(hariu === 67){
+            document.getElementById('67').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w5').style.backgroundColor = 'pink';
+        }else if(hariu === 68){
+            document.getElementById('68').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w5').style.backgroundColor = 'pink';
+        }else if(hariu === 69){
+            document.getElementById('69').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w5').style.backgroundColor = 'pink';
+        }else if(hariu === 70){
+            document.getElementById('70').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w5').style.backgroundColor = 'pink';
+        }else if(hariu === 71){
+            document.getElementById('71').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w6').style.backgroundColor = 'pink';
+        }else if(hariu === 72){
+            document.getElementById('72').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w6').style.backgroundColor = 'pink';
+        }else if(hariu === 73){
+            document.getElementById('73').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w6').style.backgroundColor = 'pink';
+        }else if(hariu === 74){
+            document.getElementById('74').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w6').style.backgroundColor = 'pink';
+        }else if(hariu === 75){
+            document.getElementById('75').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w6').style.backgroundColor = 'pink';
+        }else if(hariu === 76){
+            document.getElementById('76').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w7').style.backgroundColor = 'pink';
+        }else if(hariu === 77){
+            document.getElementById('77').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w7').style.backgroundColor = 'pink';
+        }else if(hariu === 78){
+            document.getElementById('78').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w7').style.backgroundColor = 'pink';
+        }else if(hariu === 79){
+            document.getElementById('79').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w7').style.backgroundColor = 'pink';
+        }else if(hariu === 80){
+            document.getElementById('80').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w7').style.backgroundColor = 'pink';
+        }else if(hariu === 81){
+            document.getElementById('81').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w8').style.backgroundColor = 'pink';
+        }else if(hariu === 82){
+            document.getElementById('82').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w8').style.backgroundColor = 'pink';
+        }else if(hariu === 83){
+            document.getElementById('83').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w8').style.backgroundColor = 'pink';
+        }else if(hariu === 84){
+            document.getElementById('84').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w8').style.backgroundColor = 'pink';
+        }else if(hariu === 85){
+            document.getElementById('85').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w9').style.backgroundColor = 'pink';
+        }else if(hariu === 86){
+            document.getElementById('86').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w9').style.backgroundColor = 'pink';
+        }else if(hariu === 87){
+            document.getElementById('87').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w9').style.backgroundColor = 'pink';
+        }else if(hariu === 88){
+            
+            document.getElementById('68').style.backgroundColor = 'green';
+            document.getElementById('73').style.backgroundColor = 'green';
+            document.getElementById('67').style.backgroundColor = 'green';
+            document.getElementById('76').style.backgroundColor = 'green';
+            document.getElementById('77').style.backgroundColor = 'green';
+            document.getElementById('78').style.backgroundColor = 'green';
+            document.getElementById('79').style.backgroundColor = 'green';
+            document.getElementById('80').style.backgroundColor = 'green';
+            document.getElementById('82').style.backgroundColor = 'green';
+            document.getElementById('83').style.backgroundColor = 'green';
+            document.getElementById('84').style.backgroundColor = 'green';
+            document.getElementById('88').style.backgroundColor = 'green';
+            document.getElementById('69').style.backgroundColor = 'green';
+            document.getElementById('61').style.backgroundColor = 'green';
+            document.getElementById('62').style.backgroundColor = 'green';
+            document.getElementById('63').style.backgroundColor = 'green';
+            document.getElementById('64').style.backgroundColor = 'green';
+            document.getElementById('65').style.backgroundColor = 'green';
+
+            document.getElementById('53').style.backgroundColor = 'brown';
+            document.getElementById('58').style.backgroundColor = 'brown';
+            document.getElementById('48').style.backgroundColor = 'brown';
+
+
+
+        }else if(hariu === 89){
+            document.getElementById('89').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w9').style.backgroundColor = 'pink';
+        }else if(hariu === 90){
+            document.getElementById('90').style.backgroundColor = 'green';
+            document.getElementById('h2').style.backgroundColor = 'black';
+            document.getElementById('w9').style.backgroundColor = 'pink';
+        
+        
+        
+        
+        
+        
+        }else if(hariu === 91){
+            document.getElementById('91').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e1').style.backgroundColor = 'pink';
+        }else if(hariu === 92){
+            document.getElementById('92').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e1').style.backgroundColor = 'pink';
+        }else if(hariu === 93){
+            document.getElementById('96').style.backgroundColor = 'white';
+            document.getElementById('97').style.backgroundColor = 'white';
+            document.getElementById('98').style.backgroundColor = 'brown';
+            document.getElementById('99').style.backgroundColor = 'white';
+            document.getElementById('100').style.backgroundColor = 'white';
+            document.getElementById('101').style.backgroundColor = 'white';
+            document.getElementById('102').style.backgroundColor = 'white';
+            document.getElementById('103').style.backgroundColor = 'brown';
+            document.getElementById('104').style.backgroundColor = 'white';
+            document.getElementById('105').style.backgroundColor = 'white';
+            document.getElementById('106').style.backgroundColor = 'white';
+            document.getElementById('107').style.backgroundColor = 'white';
+            document.getElementById('108').style.backgroundColor = 'white';
+            document.getElementById('109').style.backgroundColor = 'white';
+            document.getElementById('110').style.backgroundColor = 'white';
+            document.getElementById('112').style.backgroundColor = 'white';
+            document.getElementById('113').style.backgroundColor = 'white';
+            document.getElementById('114').style.backgroundColor = 'white';
+            document.getElementById('118').style.backgroundColor = 'white';
+            document.getElementById('123').style.backgroundColor = 'black';
+            document.getElementById('128').style.backgroundColor = 'black';
+
+
+        }else if(hariu === 94){
+            document.getElementById('94').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e1').style.backgroundColor = 'pink';
+        }else if(hariu === 95){
+            document.getElementById('95').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e1').style.backgroundColor = 'pink';
+        }else if(hariu === 96){
+            document.getElementById('96').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e2').style.backgroundColor = 'pink';
+        }else if(hariu === 97){
+            document.getElementById('97').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e2').style.backgroundColor = 'pink';
+        }else if(hariu === 98){
+            document.getElementById('98').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e2').style.backgroundColor = 'pink';
+        }else if(hariu === 99){
+            document.getElementById('99').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e2').style.backgroundColor = 'pink';
+        }else if(hariu === 100){
+            document.getElementById('100').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e2').style.backgroundColor = 'pink';
+        }else if(hariu === 101){
+            document.getElementById('101').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e3').style.backgroundColor = 'pink';
+        }else if(hariu === 102){
+            document.getElementById('102').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e3').style.backgroundColor = 'pink';
+        }else if(hariu === 103){
+            document.getElementById('103').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e3').style.backgroundColor = 'pink';
+        }else if(hariu === 104){
+            document.getElementById('104').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e3').style.backgroundColor = 'pink';
+        }else if(hariu === 105){
+            document.getElementById('105').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e3').style.backgroundColor = 'pink';
+        }else if(hariu === 106){
+            document.getElementById('106').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e4').style.backgroundColor = 'pink';
+        }else if(hariu === 107){
+            document.getElementById('107').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e4').style.backgroundColor = 'pink';
+        }else if(hariu === 108){
+            document.getElementById('108').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e4').style.backgroundColor = 'pink';
+        }else if(hariu === 109){
+            document.getElementById('109').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e4').style.backgroundColor = 'pink';
+        }else if(hariu === 110){
+            document.getElementById('110').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e4').style.backgroundColor = 'pink';
+        }else if(hariu === 111){
+            document.getElementById('111').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e5').style.backgroundColor = 'pink';
+        }else if(hariu === 112){
+            document.getElementById('112').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e5').style.backgroundColor = 'pink';
+        }else if(hariu === 113){
+            document.getElementById('113').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e5').style.backgroundColor = 'pink';
+        }else if(hariu === 114){
+            document.getElementById('114').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e5').style.backgroundColor = 'pink';
+        }else if(hariu === 115){
+            document.getElementById('115').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e5').style.backgroundColor = 'pink';
+        }else if(hariu === 116){
+            document.getElementById('116').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e6').style.backgroundColor = 'pink';
+        }else if(hariu === 117){
+            document.getElementById('117').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e6').style.backgroundColor = 'pink';
+        }else if(hariu === 118){
+            document.getElementById('118').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e6').style.backgroundColor = 'pink';
+        }else if(hariu === 119){
+            document.getElementById('119').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e6').style.backgroundColor = 'pink';
+        }else if(hariu === 120){
+            document.getElementById('120').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e6').style.backgroundColor = 'pink';
+        }else if(hariu === 121){
+            document.getElementById('121').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e7').style.backgroundColor = 'pink';
+        }else if(hariu === 122){
+            document.getElementById('122').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e7').style.backgroundColor = 'pink';
+        }else if(hariu === 123){
+            document.getElementById('123').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e7').style.backgroundColor = 'pink';
+        }else if(hariu === 124){
+            document.getElementById('124').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e7').style.backgroundColor = 'pink';
+        }else if(hariu === 125){
+            document.getElementById('125').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e7').style.backgroundColor = 'pink';
+        }else if(hariu === 126){
+            document.getElementById('126').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e8').style.backgroundColor = 'pink';
+        }else if(hariu === 127){
+            document.getElementById('127').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e8').style.backgroundColor = 'pink';
+        }else if(hariu === 128){
+            document.getElementById('128').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e8').style.backgroundColor = 'pink';
+        }else if(hariu === 129){
+            document.getElementById('129').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e8').style.backgroundColor = 'pink';
+        }else if(hariu === 130){
+            document.getElementById('130').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e8').style.backgroundColor = 'pink';
+        }else if(hariu === 131){
+            document.getElementById('131').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e9').style.backgroundColor = 'pink';
+        }else if(hariu === 132){
+            document.getElementById('132').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e9').style.backgroundColor = 'pink';
+        }else if(hariu === 133){
+            document.getElementById('133').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e9').style.backgroundColor = 'pink';
+        }else if(hariu === 134){
+            document.getElementById('134').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e9').style.backgroundColor = 'pink';
+        }else if(hariu === 135){
+            document.getElementById('135').style.backgroundColor = 'green';
+            document.getElementById('h3').style.backgroundColor = 'black';
+            document.getElementById('e9').style.backgroundColor = 'pink';
+        }
+
+
+
+
+
+
+    }
+
+   </script>
+</body>
+</html>
