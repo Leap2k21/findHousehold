@@ -93,11 +93,16 @@
         height: 30px;
         background-color: lightblue;
       }
+      .tsonh.active{
+        background-color: yellow;
+      }
       .mydiv{
         border: 1px solid ;
-        width: 17%;
+        width: 100vw;
         height: 5%;
-        background-color: azure;
+        display: flex;
+        justify-content: center;
+        background-image: url('https://static8.depositphotos.com/1579236/1044/i/950/depositphotos_10445328-stock-photo-colorful-bubbles-background.jpg');
       }
       .Bigdiv {
         display: flex;
@@ -105,13 +110,14 @@
         width: 100vw;
         height: 100vh;
       }
+      
     </style>
   </head>
   <body>
     <div class="Bigdiv">
       <div class="mydiv">
-        <input/>
-        <button>SEARCH</button>
+        <input type="number" name="value1" id="input"/>
+        <button onclick="onClickButton()">SEARCH</button>
       </div>
       <div class="bair"></div>
   
