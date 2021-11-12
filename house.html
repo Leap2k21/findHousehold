@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-family: 'Berkshire Swash', cursive;
+            color: red;
+            text-shadow: 0 0.05em 0.1em #0005;
+            margin-bottom: 50px;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 200%;
+            background-image: linear-gradient(to bottom, #93f4f1, #82e5f1, #77d6ef, #73c6eb, #76b6e3, #7badda, #7fa5d1, #829dc7, #859bbe, #879ab5, #8a98ac, #8d96a3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .building{
+            width: 1500px;
+            height: 750px;
+            border: #000 solid 1px;
+            background-color: rgb(63, 25, 25);
+            display: flex;
+            flex-direction: row;
+        }
+        .orts{
+            flex-grow: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .davhar{
+            width: 100%;
+            height: 9.09%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            border: #000 solid 1px;
+            box-sizing: border-box;
+        }
+      
+        .toot{
+            width: 30px;
+            height: 30px;
+            border: #000 solid 1px;
+        }
+        .haalga{
+            width: 100%;
+            height: 18.18%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: #000 solid 1px;
+            box-sizing: border-box;
+        }
+        .haalgashuu{
+            height: 100%;
+            width: 80px;
+            border: #000 solid 1px;
+            background-color: rgb(218, 35, 35);
+            box-sizing: border-box;
+        }
+        .ss{
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Marry Christmas</h1>
+    <div class="building"></div>
+    <div class="ss">
+        <input type="number" id="haih">
+        <button onclick="haih()">haih</button>
+    </div>
+    <script>
+        for(let i = 0; i < 3; i++){
+        let build = document.querySelector('.building')
+        let orts = document.createElement('div');
+        orts.classList.add('orts');
+        build.append(orts);
+        }
+        for(let l = 0; l < 3; l++){
+            for(let i = 0; i < 9; i++){
+                let ortss = document.querySelectorAll('.orts')
+                let davhar = document.createElement('div');
+                davhar.classList.add('davhar');
+                ortss[l].append(davhar);
+            }
+        }
+        for(let l = 0; l < 27; l++){
+            for(let i = 0; i < 5; i++){
+                let davharr = document.querySelectorAll('.davhar')
+                let toot = document.createElement('div');
+                toot.classList.add('toot');
+                davharr[l].append(toot);
+            }
+        }
+        for(let i = 0; i < 135; i++){
+            let colors = [  '#E6E6FA', '#D8BFD8', '#DDA0DD', '#EE82EE', '#DA70D6', '#FF00FF', '#FF00FF', '#9932CC', '#8B008B', '#800080', '#663399', '#4B0082', '#7B68EE', '#6A5ACD', '#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50','#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50','#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50','#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50','#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50','#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50','#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50','#CD5C5C', '#F08080', '#FA8072', '#E9967A', '#FFA07A', '#DC143C', '#FF0000', '#B22222', '#8B0000', '#FFC0CB', '#FFB6C1', '#FF69B4', '#FF1493', '#C71585', '#DB7093', '#FF7F50', '#483D8B']
+            let gerel = document.querySelectorAll('.toot')
+            gerel[i].style.backgroundColor = colors[i];
+        }
+        for(let l = 0; l < 3; l++){
+            for(let i = 0; i < 1; i++){
+                let ortss = document.querySelectorAll('.orts')
+                let davhar = document.createElement('div');
+                davhar.classList.add('haalga');
+                ortss[l].append(davhar);
+            }
+        }
+        for(let l = 0; l < 3; l++){
+            for(let i = 0; i < 1; i++){
+                let ortss = document.querySelectorAll('.haalga')
+                let davhar = document.createElement('div');
+                davhar.classList.add('haalgashuu');
+                ortss[l].append(davhar);
+            }
+        }
+        
+            for(let i = 0; i < 135; i++){
+                let toot = document.querySelectorAll('.toot')
+                toot[i].id = i+1;
+            }
+            for(let i = 0; i < 27; i++){
+                let davhar = document.querySelectorAll('.davhar')
+                davhar[i].id = 'w'+(i+1);
+            }
+            for(let i = 0; i < 3; i++){
+                let tootoo = document.querySelectorAll('.haalgashuu')
+                tootoo[i].id = 'h'+(i+1);
+            }
+        function haih(){
+            let hariu = Number(document.getElementById("haih").value); 
+            let hariu1 = parseInt((hariu-1)/45) 
+            let hariu2 = hariu-(45*hariu1);
+            let hariu3 = parseInt((hariu2-1)/5)
+            console.log(hariu3+1)
+
+            
+            if(hariu1 === 0){
+                document.getElementById('h1').style.backgroundColor = 'black';
+                if(hariu3+1 === 1){
+                document.getElementById('w9').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 2){
+                document.getElementById('w8').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 3){
+                document.getElementById('w7').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 4){
+                document.getElementById('w6').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 5){
+                document.getElementById('w5').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 6){
+                document.getElementById('w4').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 7){
+                document.getElementById('w3').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 8){
+                document.getElementById('w2').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 9){
+                document.getElementById('w1').style.backgroundColor = 'black';
+            }
+            }else if(hariu1 === 1){
+                document.getElementById('h2').style.backgroundColor = 'black';
+                if(hariu3+1 === 1){
+                document.getElementById('w18').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 2){
+                document.getElementById('w17').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 3){
+                document.getElementById('w16').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 4){
+                document.getElementById('w15').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 5){
+                document.getElementById('w14').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 6){
+                document.getElementById('w13').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 7){
+                document.getElementById('w12').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 8){
+                document.getElementById('w11').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 9){
+                document.getElementById('w10').style.backgroundColor = 'black';
+            }
+            }else if(hariu1 === 2){
+                document.getElementById('h3').style.backgroundColor = 'black';
+                if(hariu3+1 === 1){
+                document.getElementById('w27').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 2){
+                document.getElementById('w26').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 3){
+                document.getElementById('w25').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 4){
+                document.getElementById('w24').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 5){
+                document.getElementById('w23').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 6){
+                document.getElementById('w22').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 7){
+                document.getElementById('w21').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 8){
+                document.getElementById('w20').style.backgroundColor = 'black';
+            }else if(hariu3+1 === 9){
+                document.getElementById('w19').style.backgroundColor = 'black';
+            }
+            }
+        }
+    </script>
+</body>
