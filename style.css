@@ -14,13 +14,15 @@ button {
 }
 .bair {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 50px;
   border: 1px solid black;
 }
 .orts {
   flex: 1;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .haalga {
   border: 1px solid black;
@@ -30,7 +32,11 @@ button {
 }
 .davhar {
   display: flex;
+  justify-content: center;
   border: 1px solid black;
+}
+.tsonh.active {
+  background-color: yellow;
 }
 .tsonh {
   border: 1px solid black;
